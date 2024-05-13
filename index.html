@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- nav links -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- slider links -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+
+    <!-- footer links -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      .nav-link:hover {
+        color: #40a304 !important;
+        text-decoration: none;
+      }
+
+      .active {
+        color: #40a304 !important;
+        font-weight: 600;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    </style>
+
+    <!-- About CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <style>
+      .gtco-testimonials {
+        position: relative;
+        margin-top: 30px;
+      }
+      .gtco-testimonials h2 {
+        font-size: 30px;
+        text-align: center;
+        color: #333333;
+        margin-bottom: 50px;
+      }
+      .gtco-testimonials .owl-stage-outer {
+        padding: 30px 0;
+      }
+      .gtco-testimonials .owl-nav {
+        display: none;
+      }
+      .gtco-testimonials .owl-dots {
+        text-align: center;
+      }
+      .gtco-testimonials .owl-dots span {
+        position: relative;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        display: block;
+        background: #fff;
+        border: 2px solid #40a304;
+        margin: 0 5px;
+      }
+      .gtco-testimonials .owl-dots .active {
+        box-shadow: none;
+      }
+      .gtco-testimonials .owl-dots .active span {
+        background: #40a304 !important;
+        box-shadow: none;
+        height: 12px;
+        width: 12px;
+        margin-bottom: -1px;
+      }
+      .gtco-testimonials .card {
+        background: #fff;
+        box-shadow: 0 8px 30px -7px #c9dff0;
+        margin: 0 20px;
+        padding: 0 10px;
+        border-radius: 20px;
+        border: 0;
+      }
+      .cd__main {
+        display: block !important;
+      }
+      .gtco-testimonials .card .card-img-top {
+        max-width: 100px;
+        border-radius: 50%;
+        margin: 15px auto 0;
+        box-shadow: 0 8px 20px -4px #95abbb;
+        width: 100px;
+        height: 100px;
+      }
+      .gtco-testimonials .card h5 {
+        color: #40a304;
+        font-size: 21px;
+        line-height: 1.3;
+      }
+      .gtco-testimonials .card h5 span {
+        font-size: 18px;
+        color: #666666;
+      }
+      .gtco-testimonials .card p {
+        font-size: 18px;
+        color: #555;
+        padding-bottom: 15px;
+      }
+      .gtco-testimonials .active {
+        opacity: 0.5;
+        transition: all 0.3s;
+      }
+      .gtco-testimonials .center {
+        opacity: 1;
+      }
+      .gtco-testimonials .center h5 {
+        font-size: 24px;
+      }
+      .gtco-testimonials .center h5 span {
+        font-size: 20px;
+      }
+      .gtco-testimonials .center .card-img-top {
+        max-width: 100%;
+        height: 120px;
+        width: 120px;
+      }
+
+      @media (max-width: 767px) {
+        .gtco-testimonials {
+          margin-top: 20px;
+        }
+      }
+      .owl-carousel .owl-nav button.owl-next,
+      .owl-carousel .owl-nav button.owl-prev {
+        outline: 0;
+      }
+      .owl-carousel button.owl-dot {
+        outline: 0;
+      }
+    </style>
+
+    <style>
+      .container-fluid form {
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        background: rgba(255, 2555, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 64px;
+      }
+
+      label {
+        color: white;
+      }
+
+      form .form-control {
+        background-color: rgb(223, 222, 201);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- nav -->
+
+    <nav
+      class="navbar navbar-expand-lg w-100 px-2 m-0"
+      style="background-color: #2f4858; font-size: 16px; padding: 16px"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/logo.jpg" style="width: 64px" alt="" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse fw-bold" id="navbarScroll">
+          <ul
+            class="navbar-nav m-auto my-2 my-lg-0"
+            style="--bs-scroll-height: 100px"
+          >
+            <li class="nav-item px-lg-4">
+              <a
+                class="nav-link active text-white"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-white" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-white" href="about.html">About</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-white" href="services.html">Services</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-white" href="partner.html">Partner</a>
+            </li>
+          </ul>
+          <a href="login.html">
+            <button
+              class="btn login_btn mx-2 fw-bold p-2 me-3"
+              style="
+                color: rgb(255, 255, 255);
+                background-color: #9cadbc;
+                font-size: 16px;
+              "
+              type="submit"
+            >
+              Login
+            </button>
+          </a>
+          <a href="Register.html">
+            <button
+              class="btn login_btn p-2 me-3"
+              style="
+                color: rgb(255, 255, 255);
+                background-color: #40a304;
+                font-size: 16px;
+              "
+              type="submit"
+            >
+              Register
+            </button>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- slider -->
+
+    <div class="container-fluid w-100">
+      <div class="row">
+        <div
+          id="sg-carousel"
+          class="carousel slide carousel-fade p-0"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1" class=""></li>
+            <li data-target="#carousel" data-slide-to="2" class=""></li>
+            <li data-target="#carousel" data-slide-to="3" class=""></li>
+          </ol>
+
+          <!-- src="https://ununsplash.imgix.net/photo-1416339134316-0e91dc9ded92?q=75&fm=jpg&s=883a422e10fc4149893984019f63c818" -->
+
+          <div
+            class="imgProd"
+            style="
+              background-image: url(https://firebasestorage.googleapis.com/v0/b/fotos-3cba1.appspot.com/o/producto1.png?alt=media&amp;token=915bea59-e6c2-4474-bc72-abc1c47ef1c7);
+            "
+          ></div>
+
+          <div class="carousel-inner carousel-zoom carousel-fade">
+            <div class="item active">
+              <img
+                class="img-responsive"
+                src="https://i.pinimg.com/564x/b1/4e/17/b14e1799f9cff909255a2f8cec359adc.jpg"
+                alt=""
+                style="width: 100%; height: 100%"
+              />
+              <div class="carousel-caption">
+                <h1 data-animation="animated zoomInLeft" class="cap-txt">
+                  We are amazing
+                </h1>
+                <p data-animation="animated bounceInDown">
+                  ِContact with Us For Any Question
+                </p>
+                <button
+                  data-animation="animated bounceInUp "
+                  class="button button--tamaya button--border-thick sendbtn p-3"
+                  data-text="Send"
+                >
+                  <span>Send</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- src="https://images.unsplash.com/photo-1532580345237-bbaee187ef51?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=42145e0c3774c0886ebbadb220191d96&auto=format&fit=crop&w=1353&q=80" alt=""> -->
+
+            <div class="item">
+              <img
+                class="img-responsive"
+                src="https://i.pinimg.com/564x/fc/06/fa/fc06facd642e1d0cfe5863a2054e90f4.jpg"
+                alt=""
+              />
+
+              <div class="carousel-caption">
+                <h1 data-animation="animated zoomInLeft" class="cap-txt">
+                  We are developers
+                </h1>
+                <!-- <br> -->
+                <!-- <h1 data-animation="animated zoomInLeft" class="cap-txt"> developers</h1> -->
+                <p data-animation="animated bounceInDown">
+                  We Are Exciting to Help You
+                </p>
+                <button
+                  data-animation="animated bounceInUp"
+                  class="button button--tamaya button--border-thick sendbtn p-3"
+                  data-text="Send"
+                >
+                  <span>Send</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- https://ununsplash.imgix.net/photo-1416339276121-ba1dfa199912?q=75&fm=jpg&s=9bf9f2ef5be5cb5eee5255e7765cb327 -->
+
+            <div class="item">
+              <img
+                class="img-responsive"
+                src="https://i.pinimg.com/736x/46/5f/4c/465f4c5341c7fff148bfff0ef59b2784.jpg"
+                alt=""
+              />
+              <div class="carousel-caption animated slideInLeft">
+                <h1 data-animation="animated zoomInLeft" class="cap-txt">
+                  We are innovative
+                </h1>
+                <p data-animation="animated bounceInDown  ">
+                  Get start your next project
+                </p>
+                <button
+                  data-animation="animated bounceInUp"
+                  class="button button--tamaya button--border-thick sendbtn p-3"
+                  data-text="Send"
+                >
+                  <span>Send</span>
+                </button>
+              </div>
+            </div>
+            <!-- Carousel nav -->
+            <a
+              class="carousel-control left"
+              href="#sg-carousel"
+              data-slide="prev"
+              >‹</a
+            >
+            <a
+              class="carousel-control right"
+              href="#sg-carousel"
+              data-slide="next"
+              >›</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About -->
+    <!--  Work -->
+    <section class="work r-p" id="work">
+      <div class="container-fluid text-center">
+        <div class="gtco-testimonials">
+          <h2 style="font-size: 30px; margin: 50px 0px">About Us</h2>
+          <div class="owl-carousel owl-carousel1 owl-theme">
+            <div>
+              <div class="card text-center">
+                <img class="card-img-top" src="assets/img/salma.jpg" alt="" />
+                <div class="card-body">
+                  <h5>
+                    Salma azzam
+
+                    <span> Full-stack developer</span>
+                  </h5>
+                  <p class="card-text">
+                    “ Nam libero tempore, cum soluta nobis est eligendi optio
+                    cumque nihil impedit quo minus id quod maxime placeat ”
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="card text-center">
+                <img class="card-img-top" src="assets/img/salma2.jpg" alt="" />
+                <div class="card-body">
+                  <h5>
+                    Salma ahmed
+
+                    <span> Software Engineer </span>
+                  </h5>
+                  <p class="card-text">
+                    “ Nam libero tempore, cum soluta nobis est eligendi optio
+                    cumque nihil impedit quo minus id quod maxime placeat ”
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="card text-center">
+                <img class="card-img-top" src="assets/img/salwa.jpg" alt="" />
+                <div class="card-body">
+                  <h5>
+                    Salwa hmmad
+
+                    <span>Project Manager</span>
+                  </h5>
+                  <p class="card-text">
+                    “ Nam libero tempore, cum soluta nobis est eligendi optio
+                    cumque nihil impedit quo minus id quod maxime placeat ”
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="card text-center">
+                <img class="card-img-top" src="assets/img/kloud.jpg" alt="" />
+                <div class="card-body">
+                  <h5>
+                    Khloud farouk
+
+                    <span> Full-stack developer </span>
+                  </h5>
+                  <p class="card-text">
+                    “ Nam libero tempore, cum soluta nobis est eligendi optio
+                    cumque nihil impedit quo minus id quod maxime placeat ”
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="card text-center">
+                <img class="card-img-top" src="assets/img/nesma.jpg" alt="" />
+                <div class="card-body">
+                  <h5>
+                    Nesma fayez
+
+                    <span> Project Manager </span>
+                  </h5>
+                  <p class="card-text">
+                    “ Nam libero tempore, cum soluta nobis est eligendi optio
+                    cumque nihil impedit quo minus id quod maxime placeat ”
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#sg-carousel" data-slide="prev"
+          >‹</a
+        >
+        <a class="carousel-control right" href="#sg-carousel" data-slide="next"
+          >›</a
+        >
+      </div>
+    </section>
+
+    <section class="cards">
+      <h2 style="font-size: 30px; margin: 50px 0px">Services</h2>
+      <div class="container_">
+        <div class="containerCards"></div>
+      </div>
+    </section>
+
+    <div class="container text-center my-5">
+      <h2 style="font-size: 30px; margin: 50px 0px">Our Partners</h2>
+      <section class="customer-logos slider">
+        <div class="slide"><img src="assets/img/acer.jpg" /></div>
+        <div class="slide"><img src="assets/img/apple.jpg" /></div>
+        <div class="slide"><img src="assets/img/assus.jpg" /></div>
+        <div class="slide"><img src="assets/img/Dell.jpg" /></div>
+        <div class="slide"><img src="assets/img/hp.jpg" /></div>
+        <div class="slide"><img src="assets/img/huawei.jpg" /></div>
+        <div class="slide"><img src="assets/img/lenovo.jpg" /></div>
+      </section>
+    </div>
+
+    <div
+      class="container-fluid d-flex justify-content-center align-items-center mb-5"
+      style="margin-top: 50px"
+    >
+      <div class="col-md-6">
+        <form>
+          <h2 class="text-center" style="font-size: 30px; margin: 0px 0px 50px">
+            Contact Us
+          </h2>
+          <div class="mb-3 mt-3">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Enter your name"
+              name="name"
+              required
+            />
+          </div>
+          <div class="mb-3 mt-3">
+            <label class="" for="email">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="pwd">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="pwd"
+              placeholder="Enter password"
+              name="pswd"
+              required
+            />
+          </div>
+          <div class="mb-3 mt-3">
+            <label for="message">Message</label>
+            <textarea
+              class="form-control"
+              name="message"
+              id="message"
+            ></textarea>
+          </div>
+          <div class="d-flex justify-content-center">
+            <button
+              type="submit"
+              style="background-color: #2f4858; font-size: 16px"
+              class="btn w-50 text-white my-2"
+            >
+              Send
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer
+      class="text-center text-lg-start text-white fs-3"
+      style="background-color: #2f4858"
+    >
+      <section
+        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+      >
+        <div class="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks :</span>
+        </div>
+
+        <div>
+          <a
+            href=""
+            class="me-4 text-decoration-none"
+            style="text-decoration: none; color: #40a304"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4" style="text-decoration: none; color: #40a304">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4" style="text-decoration: none; color: #40a304">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="me-4" style="text-decoration: none; color: #40a304">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4" style="text-decoration: none; color: #40a304">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="me-4" style="text-decoration: none; color: #40a304">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <div class="row mt-3">
+            <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                <img
+                  src="assets/img/logo.jpg"
+                  style="width: 80px; height: 70px"
+                  alt=""
+                />
+              </h6>
+              <p>
+                neque officiis amet, laudantium labore delectus nulla eos itaque
+                nam eveniet ab vitae. Distinctio perferendis cupiditate
+                necessitatibus esse voluptates, accusamus aliquid.
+              </p>
+            </div>
+
+            <div class="col-md-4 col-lg-2 col-xl-2 mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+              <p>
+                <a href="#!" class="text-reset">Pricing</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Settings</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Help</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Services</a>
+              </p>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3 mb-md-0 mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p><i class="fas fa-home me-3"></i> Egypt, Assuit, ITI</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                electronic18@gmail.com
+              </p>
+              <p><i class="fas fa-phone me-3"></i> + 11 200 800 13</p>
+              <p><i class="fas fa-print me-3"></i> + 11 857 245 35</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.05)"
+      >
+        © 2024 Electronic.com
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+    <script src="script.js"></script>
+
+    <!-- About JS -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      (function () {
+        "use strict";
+
+        var carousels = function () {
+          $(".owl-carousel1").owlCarousel({
+            loop: true,
+            center: true,
+            margin: 0,
+            responsiveClass: true,
+            nav: false,
+            responsive: {
+              0: {
+                items: 1,
+                nav: false,
+              },
+              680: {
+                items: 2,
+                nav: false,
+                loop: false,
+              },
+              1000: {
+                items: 3,
+                nav: true,
+              },
+            },
+          });
+        };
+
+        (function ($) {
+          carousels();
+        })(jQuery);
+      })();
+    </script>
+
+    <script src="assets/script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".customer-logos").slick({
+          slidesToShow: 6,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 1500,
+          arrows: false,
+          dots: false,
+          pauseOnHover: false,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 4,
+              },
+            },
+            {
+              breakpoint: 520,
+              settings: {
+                slidesToShow: 3,
+              },
+            },
+          ],
+        });
+      });
+    </script>
+  </body>
+</html>

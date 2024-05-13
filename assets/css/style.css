@@ -1,0 +1,1068 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap");
+:root {
+  --currencyPrefix: "$";
+}
+
+body {
+  overflow-x: hidden;
+  color: #666;
+  padding: 0;
+  margin: 0 auto;
+}
+body * {
+  font-family: "Inter", sans-serif;
+}
+@media only screen and (max-width: 480px) {
+  body * {
+    cursor: default !important;
+  }
+}
+body p {
+  margin: 0;
+}
+body a {
+  color: #666;
+  text-decoration: none;
+}
+body ul,
+body li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+@keyframes anim_toCartQuantity {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  51% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+}
+@keyframes anim_favsHeart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed !important;
+}
+.disabled * {
+  pointer-events: none !important;
+}
+
+/*nav*/
+
+/* navbar */
+.nav-link:hover {
+  color: #40a304 !important;
+  text-decoration: none;
+}
+
+.active {
+  color: #40a304 !important;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*partner*/
+/* Slider */
+
+.slick-slide {
+  margin: 0px 20px;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.slick-track:before,
+.slick-track:after {
+  display: table;
+  content: "";
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/*******************************/
+
+.component_toCartQuantity {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  border-radius: 100px;
+  border: 1px solid #eee;
+}
+.component_toCartQuantity .toCartButton {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 40px;
+  height: 40px;
+  color: #121618;
+  border-radius: 50%;
+  background-color: #eee;
+  position: relative;
+  cursor: pointer;
+}
+.component_toCartQuantity .toCartButton.less:after {
+  display: none;
+}
+.component_toCartQuantity .toCartButton:before,
+.component_toCartQuantity .toCartButton:after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 30px);
+  height: 2px;
+  background-color: currentColor;
+}
+.component_toCartQuantity .toCartButton:after {
+  transform: rotate(90deg);
+}
+.component_toCartQuantity .toCartQuantity {
+  min-width: 50px;
+  font-size: 20px;
+  font-weight: 900;
+  user-select: none;
+}
+.component_toCartQuantity .toCartQuantity.animation {
+  animation: anim_toCartQuantity 0.2s;
+}
+.component_toCartQuantity .toCartQuantity.animation-reverse {
+  animation: anim_toCartQuantity reverse 0.2s;
+}
+
+.button {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 50px;
+  background-color: #2f4858;
+  transition: ease all 0.3s;
+  cursor: pointer;
+}
+.button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 10px 0 rgba(18, 22, 24, 0.1);
+}
+
+.buttonTextIcon {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 50px;
+  background-color: #40a304;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+.buttonTextIcon:hover .labelButton {
+  transform: translateY(-100%);
+}
+.buttonTextIcon:hover .icon {
+  bottom: 50%;
+  transform: translateY(50%);
+}
+.buttonTextIcon .labelButton {
+  margin-bottom: 0;
+  padding: 10px 20px;
+  transition: ease all 0.2s;
+}
+.buttonTextIcon .icon {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  transform: translateY(100%);
+  transition: ease all 0.2s;
+}
+.buttonTextIcon .icon svg path,
+.buttonTextIcon .icon svg circle {
+  fill: none;
+  stroke-width: 4;
+  stroke: currentColor;
+  stroke-miterlimit: 10;
+}
+
+.buttonIcon {
+  border-radius: 50px;
+  color: #2f4858;
+  border: 1px solid #2f4858;
+  cursor: pointer;
+  transition: ease all 0.3s;
+}
+.buttonIcon .icon {
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+}
+.buttonIcon .icon svg path,
+.buttonIcon .icon svg circle {
+  fill: transparent;
+  stroke-width: 2;
+  stroke: currentColor;
+  stroke-miterlimit: 10;
+  transition: ease all 0.3s;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  min-height: 100vh;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.cards .container_ {
+  width: 100% !important;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.cards .container_ .containerCards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.card_ {
+  width: 25% !important;
+  min-width: 300px !important;
+}
+.card_ .innerProd {
+  height: calc(100% - 20px);
+  margin: 10px;
+  border-radius: 5px;
+  display: block;
+  border: 1px solid #eee;
+  background-color: #fff;
+  overflow: hidden;
+  user-select: none;
+  transition: ease all 0.3s;
+}
+.card_ .innerProd:hover {
+  box-shadow: 0 5px 10px 0 rgba(18, 22, 24, 0.2);
+}
+.card_ .innerProd .imgWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 200px;
+  box-sizing: border-box;
+  background-color: #eee;
+  position: relative;
+}
+.card_ .innerProd .imgWrapper:hover .imgProd {
+  transform: scale(0.8);
+}
+.card_ .innerProd .imgWrapper:hover .quickDetails {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+.card_ .innerProd .imgWrapper .quickDetails {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 90%;
+  height: 90%;
+  padding: 20px;
+  opacity: 0;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: rgba(18, 22, 24, 0.9);
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  transition: ease all 0.3s;
+}
+.card_ .innerProd .imgWrapper .quickDetails .icon {
+  width: 35px;
+  height: 35px;
+  margin-bottom: 5px;
+}
+.card_ .innerProd .imgWrapper .quickDetails .icon svg path,
+.card_ .innerProd .imgWrapper .quickDetails .icon svg circle {
+  fill: none;
+  stroke: currentColor;
+}
+.card_ .innerProd .imgWrapper .imgProd {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  margin: 10px;
+  transition: ease all 0.3s;
+}
+.card_ .innerProd .info {
+  padding: 20px 10px;
+  text-align: center;
+  display: block;
+  height: 180px;
+  box-sizing: border-box;
+}
+.card_ .innerProd .info .prodName {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  color: #121618;
+  font-weight: 600;
+}
+.card_ .innerProd .info .prodDesc {
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  margin: 0 auto;
+  max-width: 80%;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.card_ .innerProd .info .prices {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+}
+.card_ .innerProd .info .prices .price,
+.card_
+  .innerProd
+  .info
+  .prices
+  .quickInfoModal
+  .modalContainer
+  .topContent
+  .text
+  .wrapper
+  .priceOffer,
+.quickInfoModal
+  .modalContainer
+  .topContent
+  .text
+  .wrapper
+  .card_
+  .innerProd
+  .info
+  .prices
+  .priceOffer {
+  font-size: 25px;
+  font-weight: 600;
+  color: #2f4858;
+}
+.card_ .innerProd .info .prices .price:before,
+.card_
+  .innerProd
+  .info
+  .prices
+  .quickInfoModal
+  .modalContainer
+  .topContent
+  .text
+  .wrapper
+  .priceOffer:before,
+.quickInfoModal
+  .modalContainer
+  .topContent
+  .text
+  .wrapper
+  .card_
+  .innerProd
+  .info
+  .prices
+  .priceOffer:before {
+  content: var(--currencyPrefix);
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.card_ .innerProd .info .prices .stock {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: right;
+}
+.card_ .innerProd .info .prices .stock.out:before {
+  background-color: red;
+}
+.card_ .innerProd .info .prices .stock:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  min-width: 10px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background-color: green;
+}
+.card_ .innerProd .info .prices .priceOriginal {
+  color: red;
+  font-weight: 600;
+  text-align: right;
+  text-decoration: line-through;
+}
+.card_ .innerProd .info .prices .priceOriginal:before {
+  content: var(--currencyPrefix);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.card_ .innerProd .actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding: 20px 10px;
+}
+.card_ .innerProd .actions .button {
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 50px;
+  background-color: #2f4858;
+  cursor: pointer;
+  transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) all 0.5s;
+}
+.card_ .innerProd .actions .button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px 0 rgba(18, 22, 24, 0.5);
+}
+.card_ .innerProd .actions .row-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+}
+.card_ .innerProd .actions .row-buttons .checkBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  cursor: pointer;
+}
+.card_ .innerProd .actions .row-buttons .checkBox input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+.card_ .innerProd .actions .row-buttons .checkBox input:checked ~ .icon:after {
+  width: 80%;
+  height: 80%;
+}
+.card_ .innerProd .actions .row-buttons .checkBox .icon {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border-radius: 50%;
+  border: 1px solid #2f4858;
+  position: relative;
+}
+.card_ .innerProd .actions .row-buttons .checkBox .icon:after {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  content: "✓";
+  position: absolute;
+  width: 0;
+  height: 0;
+  color: #fff;
+  font-size: 10px;
+  border-radius: 50%;
+  background-color: #47d3e6;
+  transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) all 0.3s;
+}
+.card_ .innerProd .actions .row-buttons .checkBox .checkBoxLabel {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.card_ .innerProd .actions .row-buttons .favorites {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.card_ .innerProd .actions .row-buttons .favorites:after {
+  content: "Favorite ";
+}
+.card_ .innerProd .actions .row-buttons .favorites.isFav:after {
+  content: "In favorites";
+}
+.card_ .innerProd .actions .row-buttons .favorites.isFav .icon {
+  animation: anim_favsHeart 0.2s linear;
+}
+.card_ .innerProd .actions .row-buttons .favorites.isFav .icon svg path {
+  fill: red;
+}
+.card_ .innerProd .actions .row-buttons .favorites .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  color: red;
+}
+.card_ .innerProd .actions .row-buttons .favorites .icon svg {
+  overflow: hidden;
+}
+.card_ .innerProd .actions .row-buttons .favorites .icon svg path {
+  fill: transparent;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  transition: ease all 0.3s;
+}
+
+.quickInfoModal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 22, 24, 0.8);
+  z-index: 1000;
+}
+.quickInfoModal .closeModal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.quickInfoModal .modalContainer {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1000px;
+  background-color: #fff;
+  position: relative;
+}
+.quickInfoModal .modalContainer .topContent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+.quickInfoModal .modalContainer .topContent .imageContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 50%;
+  min-height: 500px;
+  background-color: #eee;
+  box-sizing: border-box;
+  position: relative;
+}
+.quickInfoModal .modalContainer .topContent .imageContainer .zoomWatch {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  padding: 15px;
+  border-radius: 50%;
+  color: #121618;
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgba(18, 22, 24, 0.1);
+  z-index: 1;
+  cursor: pointer;
+}
+.quickInfoModal
+  .modalContainer
+  .topContent
+  .imageContainer
+  .zoomWatch
+  svg
+  path {
+  fill: none;
+  stroke-width: 2;
+  stroke: currentColor;
+  stroke-miterlimit: 10;
+}
+.quickInfoModal .modalContainer .topContent .imageContainer .wrapperImg {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+.quickInfoModal .modalContainer .topContent .imageContainer .wrapperImg .image {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.quickInfoModal
+  .modalContainer
+  .topContent
+  .imageContainer
+  .wrapperImg
+  .zoom_icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  background-color: #fff;
+  border: 1px solid rgba(18, 22, 24, 0.2);
+  box-sizing: border-box;
+  cursor: move;
+}
+.quickInfoModal .modalContainer .topContent .imageContainer .zoomImg {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  overflow: hidden;
+  z-index: 1;
+}
+.quickInfoModal .modalContainer .topContent .imageContainer .zoomImg .zoom {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.quickInfoModal .modalContainer .topContent .text {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 50%;
+}
+.quickInfoModal .modalContainer .topContent .text .wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: center;
+  padding: 50px 20px;
+  text-align: center;
+  max-height: 90vh;
+  overflow: auto;
+  box-sizing: border-box;
+}
+.quickInfoModal .modalContainer .topContent .text .wrapper .actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin: 30px auto;
+}
+.quickInfoModal
+  .modalContainer
+  .topContent
+  .text
+  .wrapper
+  .actions
+  .buttonTextIcon {
+  margin: 0 10px 0 20px;
+}
+.quickInfoModal
+  .modalContainer
+  .topContent
+  .text
+  .wrapper
+  .actions
+  .buttonIcon.isFav {
+  color: red;
+  border-color: currentColor;
+  background-color: currentColor;
+}
+.quickInfoModal
+  .modalContainer
+  .topContent
+  .text
+  .wrapper
+  .actions
+  .buttonIcon.isFav:hover
+  path,
+.quickInfoModal
+  .modalContainer
+  .topContent
+  .text
+  .wrapper
+  .actions
+  .buttonIcon.isFav:hover
+  circle {
+  fill: #fff;
+}
+.quickInfoModal
+  .modalContainer
+  .topContent
+  .text
+  .wrapper
+  .actions
+  .buttonIcon.isFav
+  path,
+.quickInfoModal
+  .modalContainer
+  .topContent
+  .text
+  .wrapper
+  .actions
+  .buttonIcon.isFav
+  circle {
+  fill: #fff;
+}
+.quickInfoModal
+  .modalContainer
+  .topContent
+  .text
+  .wrapper
+  .actions
+  .buttonIcon:hover
+  path,
+.quickInfoModal
+  .modalContainer
+  .topContent
+  .text
+  .wrapper
+  .actions
+  .buttonIcon:hover
+  circle {
+  fill: red;
+  stroke: red;
+}
+.quickInfoModal .modalContainer .topContent .text .wrapper p {
+  font-size: 14px;
+}
+.quickInfoModal .modalContainer .topContent .text .wrapper .bold {
+  font-weight: 600;
+}
+.quickInfoModal .modalContainer .topContent .text .wrapper .title {
+  font-size: 25px;
+  font-weight: 900;
+}
+.quickInfoModal .modalContainer .topContent .text .wrapper .prices {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin: 10px auto;
+}
+.quickInfoModal .modalContainer .topContent .text .wrapper .price,
+.quickInfoModal .modalContainer .topContent .text .wrapper .priceOffer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  font-size: 30px;
+  font-weight: 900;
+  color: #2f4858;
+  margin-bottom: 0;
+}
+.quickInfoModal .modalContainer .topContent .text .wrapper .price:before,
+.quickInfoModal .modalContainer .topContent .text .wrapper .priceOffer:before {
+  font-size: 20px;
+  content: var(--currencyPrefix);
+}
+.quickInfoModal .modalContainer .topContent .text .wrapper .priceOffer {
+  color: red;
+  font-size: 20px;
+  margin-left: 10px;
+  text-decoration: line-through;
+}
+.quickInfoModal .modalContainer .topContent .text .wrapper .stock {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 5px;
+}
+.quickInfoModal .modalContainer .topContent .text .wrapper .stock.out:before {
+  background-color: red;
+}
+.quickInfoModal .modalContainer .topContent .text .wrapper .stock:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  min-width: 10px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background-color: green;
+}
+.quickInfoModal .modalContainer .topContent .text .wrapper .button {
+  margin-top: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .quickInfoModal .modalContainer .topContent .imageContainer,
+  .quickInfoModal .modalContainer .topContent .text {
+    width: 100%;
+  }
+  .quickInfoModal .modalContainer .topContent .imageContainer {
+    min-height: 250px;
+  }
+  .quickInfoModal .modalContainer .topContent .imageContainer .zoomWatch {
+    display: none;
+  }
+  .quickInfoModal .modalContainer .topContent .imageContainer .wrapperImg {
+    padding: 10px;
+  }
+  .quickInfoModal .modalContainer .topContent .imageContainer .zoomImg {
+    top: 100%;
+    left: 0;
+  }
+  .quickInfoModal .modalContainer .topContent .text .wrapper {
+    max-height: calc(90vh - 250px);
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .quickInfoModal .modalContainer .topContent .imageContainer {
+    min-height: 200px;
+  }
+  .quickInfoModal .modalContainer .topContent .text .wrapper {
+    max-height: calc(90vh - 200px);
+  }
+  .quickInfoModal .modalContainer .topContent .text .wrapper .title {
+    font-size: 20px;
+  }
+  .quickInfoModal .modalContainer .topContent .text .wrapper .actions {
+    flex-direction: column;
+    width: 100%;
+    margin: 20px auto;
+  }
+  .quickInfoModal
+    .modalContainer
+    .topContent
+    .text
+    .wrapper
+    .actions
+    .buttonTextIcon {
+    margin: 20px auto 0 auto;
+  }
+  .quickInfoModal
+    .modalContainer
+    .topContent
+    .text
+    .wrapper
+    .actions
+    .buttonIcon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}

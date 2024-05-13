@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electronics | Register</title>
+    <link rel="stylesheet" href="RegiterStyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+    <style>
+      .nav-link:hover {
+        color: #40a304 !important;
+        text-decoration: none;
+      }
+
+      .active {
+        color: #40a304 !important;
+        font-weight: 600;
+      }
+
+      a {
+        text-decoration: none !important;
+        color: #40a304 !important;
+      }
+    </style>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-expand-lg w-100 px-2 m-0 p-0"
+      style="background-color: #2f4858"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/logo.jpg" style="width: 4rem" alt="" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse fw-bold" id="navbarScroll">
+          <ul
+            class="navbar-nav m-auto my-2 my-lg-0"
+            style="--bs-scroll-height: 100px"
+          >
+            <li class="nav-item px-lg-4">
+              <a
+                class="nav-link active text-white"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-white" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-white" href="about.html">About</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-white" href="services.html">Services</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-white" href="partner.html">Partner</a>
+            </li>
+          </ul>
+          <a href="login.html">
+            <button
+              class="btn login_btn mx-2 fw-bold p-2 me-3"
+              style="color: rgb(255, 255, 255); background-color: #9cadbc"
+              type="submit"
+            >
+              Login
+            </button>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <section
+      class="vh-120 bg-image my-5"
+      style="
+        background-image: url('view-3d-computer-device-with-peripheral-devices.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      "
+    >
+      <div class="align-items-center h-100 gradient-custom-3">
+        <div class="container h-100">
+          <div
+            class="row d-flex justify-content-center align-items-center h-100"
+          >
+            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+              <div class="card my-5" style="border-radius: 15px">
+                <div class="card-body p-5">
+                  <h4 class="text-uppercase text-center mb-5">
+                    Create new account
+                  </h4>
+
+                  <form>
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form3Example1cg"
+                        >Your Name</label
+                      >
+                      <input
+                        type="text"
+                        id="form3Example1cg"
+                        class="form-control form-control-lg"
+                      />
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form3Example3cg"
+                        >Your Email</label
+                      >
+
+                      <input
+                        type="email"
+                        id="form3Example3cg"
+                        class="form-control form-control-lg"
+                      />
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form3Example4cg"
+                        >Password</label
+                      >
+
+                      <input
+                        type="password"
+                        id="form3Example4cg"
+                        class="form-control form-control-lg"
+                      />
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form3Example4cdg"
+                        >Repeat your password</label
+                      >
+
+                      <input
+                        type="password"
+                        id="form3Example4cdg"
+                        class="form-control form-control-lg"
+                      />
+                    </div>
+
+                    <div class="form-check d-flex justify-content-center mb-5">
+                      <input
+                        class="form-check-input me-2"
+                        type="checkbox"
+                        value=""
+                        id="form2Example3cg"
+                      />
+                      <label class="form-check-label" for="form2Example3cg">
+                        I agree to all statements in
+                        <a href="#!" class="text-body"
+                          ><u>Terms of service</u></a
+                        >
+                      </label>
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                      <button
+                        type="button"
+                        class="btn btn-block btn-lg gradient-custom-4 text-white p-2"
+                        style="background-color: #40a304"
+                      >
+                        Register
+                      </button>
+                    </div>
+
+                    <p class="text-center text-muted mt-5 mb-0">
+                      Have already an account?
+                      <a
+                        href="login.html"
+                        class="fw-bold text-decoration-none"
+                        style="color: #2f4858"
+                        >Login</a
+                      >
+                    </p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="text-center text-lg-start text-white"
+      style="background-color: #2f4858"
+    >
+      <section
+        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+      >
+        <div class="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks :</span>
+        </div>
+
+        <div>
+          <a href="" class="me-4 text-decoration-none">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="me-4">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="me-4">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <div class="row mt-3">
+            <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                <img
+                  src="assets/img/logo.jpg"
+                  style="width: 80px; height: 70px"
+                  alt=""
+                />
+              </h6>
+              <p>
+                neque officiis amet, laudantium labore delectus nulla eos itaque
+                nam eveniet ab vitae. Distinctio perferendis cupiditate
+                necessitatibus esse voluptates, accusamus aliquid.
+              </p>
+            </div>
+
+            <div class="col-md-4 col-lg-2 col-xl-2 mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+              <p>
+                <a href="#!" class="text-reset">Pricing</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Settings</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Help</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Services</a>
+              </p>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3 mb-md-0 mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p><i class="fas fa-home me-3"></i> Egypt, Assuit, ITI</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                electronic18@gmail.com
+              </p>
+              <p><i class="fas fa-phone me-3"></i> + 11 200 800 13</p>
+              <p><i class="fas fa-print me-3"></i> + 11 857 245 35</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.05)"
+      >
+        © 2024 Electronic.com
+      </div>
+    </footer>
+    <script>
+      $(document).ready(function () {
+        function validateEmail(email) {
+          var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return emailRegex.test(email);
+        }
+
+        function validatePassword(password) {
+          return password.length >= 8;
+        }
+
+        $("button").click(function () {
+          var name = $("#form3Example1cg").val();
+          var email = $("#form3Example3cg").val();
+          var password = $("#form3Example4cg").val();
+          var repeatPassword = $("#form3Example4cdg").val();
+
+          if (name.trim() === "") {
+            alert("Please enter your name");
+            return;
+          }
+
+          if (!validateEmail(email)) {
+            alert("Please enter a valid email address");
+            return;
+          }
+
+          if (!validatePassword(password)) {
+            alert("Please enter a password with at least 8 characters");
+            return;
+          }
+
+          if (password !== repeatPassword) {
+            alert("Passwords do not match");
+            return;
+          }
+
+          alert("Registration successful!");
+        });
+      });
+    </script>
+  </body>
+</html>
